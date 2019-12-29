@@ -5,7 +5,7 @@ const app = express();
 // Connect Database
 connectDB();
 
-app.use("/", (req, res) => res.json({ msg: "API Running" }));
+app.get("/", (req, res) => res.json({ msg: "API Running" }));
 
 // Define Routes
 app.use("/api/users", require("./routes/api/users"));
