@@ -5,9 +5,9 @@ const router = express.Router();
 //@desc      Register user
 //@access    Public
 router.get("/", (req, res) => {
-  console.log(req.body)
+  console.log(req.body);
 
-  res.json({ msg: "User route" }));
-}
+  res.json({ msg: "User route" });
+});
 
 module.exports = router;
