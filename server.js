@@ -26,7 +26,10 @@ app.use("/api/profile", require("./routes/api/profile"));
 app.use("/api/posts", require("./routes/api/posts"));
 
 const PORT = process.env.PORT || 5000;
-const server = app.listen(PORT, console.log(`Listening on port ${PORT}`));
+const server = app.listen(
+  PORT,
+  console.log(`Server running in ${config.get("nodeEnv")} mode on port ${PORT}`)
+);
 
 // Handle unhandled rejections
 process.on("unhandledRejection", (err, promise) => {
