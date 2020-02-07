@@ -63,6 +63,7 @@ router.post(
       status,
       githubusername,
       skills,
+      github,
       youtube,
       facebook,
       twitter,
@@ -85,6 +86,7 @@ router.post(
 
     // Build social object
     profileFields.social = {};
+    if (github) profileFields.social.github = github;
     if (youtube) profileFields.social.youtube = youtube;
     if (twitter) profileFields.social.twitter = twitter;
     if (facebook) profileFields.social.facebook = facebook;
